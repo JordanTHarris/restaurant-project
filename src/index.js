@@ -1,21 +1,39 @@
-import _ from 'lodash';
 import './style.css';
-// import Icon from './icon.png';
+import mainPage from './main-page';
+import menuPage from './menu-page';
+import contactPage from './contact-page';
 
-function component() {
-  const element = document.createElement('div');
+const content = document.getElementById('content');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+function tabListeners() {
+  const tabs = document.querySelectorAll('.tablinks');
+  const main = mainPage();
+  const menu = menuPage();
+  const contact = contactPage();
 
-  // const myIcon = new Image();
-  // myIcon.src = Icon;
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', (ev) => {
+      // remove active from all tab buttons
+      tabs.forEach((tab) => {
+        tab.classList.remove('active');
+      });
+      // Then set active for the correct tab and replace content
+      if (ev.target.id === 'main-tab') {
+        tab.classList.add('active');
+        content.replaceChildren(main);
+      } else if (ev.target.id === 'menu-tab') {
+        tab.classList.add('active');
+        content.replaceChildren(menu);
+      } else if (ev.target.id === 'contact-tab') {
+        tab.classList.add('active');
+        content.replaceChildren(contact);
+      }
+    });
+  });
 
-  // element.appendChild(myIcon);
-  // const myIcon = document.createElement('img');
-
-  return element;
+  // Load main by default
+  document.getElementById('main-tab').click();
 }
 
-document.body.appendChild(component());
+tabListeners();
+document.body.appendChild(content);
