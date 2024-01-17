@@ -54,6 +54,7 @@ body {
   max-width: 100%;
   width: 100vw;
   top: 0px;
+  filter: brightness(50%);
 }
 
 #main-text-container {
@@ -66,14 +67,14 @@ body {
 
 #main-title {
   font-size: 5vw;
-  color: #9575cd;
+  color: #b990ff;
   text-shadow: 2px 2px #5d34a3;
 }
 
 #main-description {
   font-size: 1.8vw;
   color: #ffffff;
-  text-shadow: 2px 2px #3a2166;
+  text-shadow: 2px 2px #383838;
 }
 
 #main,
