@@ -11,21 +11,32 @@ body {
   background-color: #212121;
   height: 100vh;
   max-height: 100vh;
-  /* border: 1px solid red; */
   margin: 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/main-page-image.jpg');
+  background-size: auto 150vh;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #content {
-  /* display: flex; */
+  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  width: 100%vw;
+  width: 100%;
   margin: 0px;
   flex: 1;
-  /* border: 1px solid white; */
   margin: 0px;
   overflow: hidden;
+}
+
+.tab-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px;
+  background-color: #212121;
 }
 
 .tab button {
@@ -50,10 +61,9 @@ body {
   background-color: #7c4dff;
 }
 
-#main-image {
-  max-width: 100%;
-  width: 100vw;
-  top: 0px;
+#main-image,
+#contact-image {
+  height: 150vh;
   filter: brightness(50%);
 }
 
@@ -66,13 +76,15 @@ body {
 }
 
 #main-title {
-  font-size: 5vw;
+  /* font-size: 5vw; */
+  font-size: 4em;
   color: #b990ff;
   text-shadow: 2px 2px #5d34a3;
 }
 
 #main-description {
-  font-size: 1.8vw;
+  /* font-size: 1.8vw; */
+  font-size: 1.5em;
   color: #ffffff;
   text-shadow: 2px 2px #383838;
 }
@@ -93,13 +105,15 @@ body {
   padding-top: 20px;
 }
 
-#phone-number {
+#phone-number,
+#address {
+  font-size: 1.5em;
   padding-bottom: 10px;
 }
 
 #google-maps {
-  width: 100vw;
+  min-width: 80vw;
   height: 60vh;
-  margin-top: 40px;
+  margin-top: 30px;
   border: none;
 }
