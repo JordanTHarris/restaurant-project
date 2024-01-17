@@ -93,6 +93,10 @@ body {
   padding-top: 20px;
 }
 
+#phone-number {
+  padding-bottom: 10px;
+}
+
 #google-maps {
   width: 100vw;
   height: 60vh;
