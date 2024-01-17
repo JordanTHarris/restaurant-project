@@ -1,7 +1,7 @@
-import './style.css';
 import mainPage from './main-page';
 import menuPage from './menu-page';
 import contactPage from './contact-page';
+import './style.css';
 
 const content = document.getElementById('content');
 
