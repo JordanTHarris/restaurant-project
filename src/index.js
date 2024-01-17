@@ -28,7 +28,6 @@ function createTabLogic() {
       }
     });
   }
-  // tabs.forEach((tab) => {});
 
   // Click main by default
   document.getElementById('main-tab').click();

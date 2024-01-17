@@ -11,11 +11,10 @@ function contactComponent() {
   title.textContent = 'Contact Us';
 
   phoneNumber.id = 'phone-number';
-  phoneNumber.textContent = '123-456-7890';
+  phoneNumber.textContent = '📞 123-456-7890';
 
   address.id = 'address';
-  address.textContent = '123 Main Street, Anytown, USA';
-  // address.textContent = '25 Ellis St NE, Atlanta, GA 30303';
+  address.textContent = '📌 25 Ellis St NE, Atlanta, GA 30303';
 
   element.appendChild(title);
   element.appendChild(phoneNumber);
